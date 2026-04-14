@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+    font-family: Inter, Arial, sans-serif;
+    background: linear-gradient(180deg, #002347 0%, #001F3F 100%);
+    color: #ffffff;
+}
+
+body {
+    background: linear-gradient(180deg, #002347 );
+}
+
+#cabecalho {
+    padding: 30px 0;
+    text-align: center;
+}
+
+#cabecalho > img {
+    max-width: 180px;
+    width: auto;
+    height: auto;
+    display: inline-block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+#conteudo_principal {
+    min-height: calc(100vh - 180px);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+#conteudo_principal > form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1 1 auto;
+}
+
+#div_conversa {
+    width: 100%;
+    flex: 1 1 auto;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-right: 6px;
+}
+
+#footer_pergunta {
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 79px;
+    display: flex;
+    align-items: center;
+    border-radius: 16px;
+    padding: 14px 16px;
+    gap: 12px;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+}
+
+#footer_pergunta > button,
+.div_card_conversa > button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    border-radius: 14px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#footer_pergunta > button:hover {
+    background-color: rgba(0, 35, 71, 0.08);
+    transform: translateY(-1px);
+}
+
+#footer_pergunta > button > svg {
+    width: 24px;
+    height: 24px;
+    fill: #002347;
+}
+
+#footer_pergunta > textarea {
+    flex: 1 1 auto;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+    resize: none;
+    overflow-y: auto;
+    font-size: 1rem;
+    min-height: 50px;
+    height: 50px;
+    line-height: 1.4;
+    padding: 12px 14px;
+    color: #111827;
+}
+
+#footer_pergunta > button[type="submit"] {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background-color: #002347;
+    color: #ffffff;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#footer_pergunta > button[type="submit"]:hover {
+    transform: translateY(-1px);
+    background-color: #001b34;
+}
+
+#footer_pergunta > button[type="submit"] svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.div_card_conversa {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.div_card_conversa p {
+    border-radius: 20px;
+    width: 100%;
+    max-width: 520px;
+    min-height: 56px;
+    padding: 12px 14px;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.div_card_conversa_usuario {
+    justify-content: flex-end;
+}
+
+.div_card_conversa_usuario > p {
+    background-color: #f1f1f1;
+    color: #111827;
+}
+
+.div_card_conversa_chat {
+    justify-content: flex-start;
+}
+
+.div_card_conversa_chat > p {
+    background-color: #74747c;
+    color: #ffffff;
+}
+
+.div_card_conversa .img_audio {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    border: 1px solid #002347;
+    background: #002347;
+    object-fit: cover;
+}
+
+#div_resultados_ocr {
+    margin-top: 20px;
+    text-align: center;
+    display: none;
+}
